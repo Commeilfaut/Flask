@@ -8,7 +8,14 @@
 <div class="container">
     <h1>Все статьи на сайте</h1>
 
-    {{ articles[0].title }}
+    {% for el in articles %}
+    <div class="alert alert-info">
+        <h2>{{ el.title }}</h2>
+        <p>{{ el.intro }}</p>
+        <p><b>{{ el.date.date() }}</b></p>
+        <butonn class="btn btn-warning">Детальнее</butonn>
+    </div>
+    {% endfor %}
 
 </div>
 {% endblock %}
