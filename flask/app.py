@@ -32,7 +32,7 @@ def about():
 
 @app.route('/posts')
 def posts():
-    articles = Article.query.order_by(Article.date.desc()).all()
+    articles = Article.query.order_by(Article.text.desc()).all()
     return render_template("posts.html", articles=articles)
 
 
